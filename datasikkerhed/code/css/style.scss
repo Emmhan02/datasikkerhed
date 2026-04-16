@@ -1,0 +1,79 @@
+:root{
+    --bg-color: #FBF7F4;
+    --scene-border-color: #A18276;
+    --scene-border-size: 10px; 
+    --font-color: #212529;
+    --choice1-color: #0CB2AF;
+    --choice2-color: #A1C65D;
+    --choice3-color: #FAC723;
+    --choice4-color: #F29222;
+    --choice5-color: #E95E50;
+    --choice6-color: #936FAC;
+    --choice-border-size: 3px; 
+    --share-most-data-color: #EE6055;
+    --share-some-data-color: #FFD97D;
+    --share-minimum-data-color: #60D394;
+    --box-shadow-color: #CFCFCF;
+}
+
+//kodestart------------------------
+//general kode---------------------
+
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-image: url(../img/background\ full.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.div-bg-standard-scene{
+    background-color: var(--bg-color);
+    margin: 100px;
+    border: solid var(--scene-border-size) var(--scene-border-color);
+    padding: 50px;
+    width: auto;
+    height: 750px;
+}
+
+button{
+    border-radius: 15px;
+    width: 50%;
+    padding: 15px;
+    margin: 5px;
+    box-shadow: 0px 5px var(--box-shadow-color);
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+button:active{
+    box-shadow: 0px 2px var(--box-shadow-color);
+    transform: translateY(3px);
+}
+
+//main-----------------------------------
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+.p-div{
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+.choice1{
+    border: solid 3px var(--choice1-color);
+}
+
+.choice1:hover{
+    background-color: var(--choice1-color);
+}
+  
