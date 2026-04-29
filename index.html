@@ -3,28 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>En dag med datasikkerhed...</title>
+    <title>En dag med datasikkerhed</title>
     <link rel="stylesheet" href="css/style.css">
-    <a href="https://github.com/Emmhan02/datasikkerhed.git"></a>
     <script src="js/script.js" defer></script>
 </head>
-
 <body>
 
     <main>
-        <div class="div-bg-standard-scene">
-         <h1>En dag med datasikkerhed...</h1>
-            <div class="p-div">
-            <p>Det er tirsdag. Du er erhvervsstuderende på IBA (hvad det så end betyder &#128517). Nå, men det er altså morgen, og du er bare herre træt efter en lang weekend. Så træt, at du er træt, selvom det som sagt er tirsdag.
-            Du kunne faktisk godt bruge en lur, men man kan ikke så godt ligge sig over bordet i klassen for at sove, så du må finde på noget andet at lave, for ikke at falde i søvn. Du kan jo eventuelt spille et spil. </p>
-            
-            <p>Før du vælger, hvad du vil spille, er du nødt til at beslutte, om du vil bruge penge på et spil eller måske købe noget ekstra lækkert til din frokost i kantinen. Du VED, at de serverer din livret i dag...</p>
+        <h1>En dag med datasikkerhed</h1>
+        <!--indeks 0-->
+        <section class="stage active">
+            <h2>Velkommen</h2>
+            <p>Forestil dig, at du er studerende på en videregående uddannelse. I skal egentligt bruge dagen på at lære omkring datasikkerhed, men det er sådan et bredt emne, ooog... <br>Du føler dig slet ikke motiveret til at lære noget på sådan en helt almindelig dag som i dag. Nå, man har ikke altid et valg, så vi må hellere komme i gang.</p>
+            <button class="btn choice1">Start din dag</button>
+        </section>
 
-            <button class="choice1">valg 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, dicta iure aliquid, corrupti incidunt illo ex itaque sapiente animi tenetur beatae debitis cumque nesciunt unde expedita! Alias, ex quos temporibus quidem, nulla ratione nemo vitae, voluptas voluptatibus nostrum mollitia non!</button>
-            <button class="choice2">valg 2</button>
+        <!--indeks 1//Start-->
+        <section class="stage">
+            <h2>I klasseværelset</h2>
+            <p>På trods af udsigten til at skulle bruge dagen på at lære om datasikkerhed, så lykkedes det dig alligevel at komme ud af døren og i skole. Din plads er bagerst i lokalet, og du forsøger virkelig at lytte til din lærer... <br><br>Han snakker vidst om noget med.. at fiske? Altså, det har det bare overhovedet ikke noget at gøre med det der sikkerhedspjat. Hvis du har brug for et øjeblik til dig selv, så kan du altid downloade et spil på din computer, så hovedet lige kan få en pause fra din lærer og alle de fisk, som han åbenbart har.
+            </p>
+            <div class="btn-grid three-btn">
+                <button class="btn choice1">Download spil</button>
             </div>
-        </div>
-    </main>
+        </section>
 
+        <!--indeks 2//Download spil-->
+        <section class="stage">
+            <h2>At downloade et spil</h2>
+            <p>Hvem kunne ikke bruge en pause i ny og næ? Du vælger altså at åbne din pc. Læreren tror 100% på, at du lytter aktivt og bare vil skrive nogle rigtig gode noter om alle hans fisk. <br> Trin 1 er at åbne din app-store, så det er så nemt og dejligt. <br> Trin 2 er at beslutte, om du vil bruge penge på et spil eller ej? Før du tager din beslutning, vil jeg bare lige hurtigt nævne, at de serverer din livret i kantinen i dag&#128525;</p>
+            <div class="btn-grid two-btn">
+                <button class="btn choice1">Brug penge</button>
+                <button class="btn choice2">Download gratis</button>
+            </div>
+        </section>
+
+        <!--indeks 3//Brug penge-->
+        <section class="stage">
+            <h2>Big spender</h2>
+            <p>Penge har du åbenbart nok af - jeg er glad på dine vegne!&#128523; <br> Så er næste trin jo så at finde ud af, hvilken slags spil, du kan lide at spille?</p>
+            <div class="btn-grid three-btn">
+                <button class="btn choice1">Action & Eventyr</button>
+                <button class="btn choice2">Puslespil & Hovedbrud</button>
+                <button class="btn choice3">Strategi & Simulation</button>
+                <button class="btn choice4">Rollespil(RPG)</button>
+                <button class="btn choice5">Casual & Familie</button>
+                <button class="btn choice6">Sport & Racing</button>
+            </div>
+        </section>
+
+        <!--indeks 4//Download gratis-->
+        <section class="stage">
+            <h2>Joachim Von And</h2>
+            <p>Som verdens nok mest kendte and, har du valgt at bruge dine penge med omhu - gratis spil er der nok af, så du er ikke i tvivl om, at du nok skal finde noget spændende! <br> Så er næste trin jo så at finde ud af, hvilken slags spil, du kan lide at spille?</p>
+            <div class="btn-grid four-btn">
+                <button class="btn choice1">Action & Eventyr</button>
+                <button class="btn choice2">Puslespil & Hovedbrud</button>
+                <button class="btn choice3">Strategi & Simulation</button>
+                <button class="btn choice4">Rollespil(RPG)</button>
+                <button class="btn choice5">Casual & Familie</button>
+                <button class="btn choice6">Sport & Racing</button>
+            </div>
+        </section>
+
+        <!--indeks 5//Action og Eventyr-->
+        <section class="stage">
+            <h2>Action og Eventyr</h2>
+            <p>Er hvad hjertet begærer. Hvilket spil, vil du helst prøve kræfter med?</p>
+            <div class="btn-grid five-btn">
+                <button class="btn choice1"><img src="img/games/paid/logo-dead-cells.jpg" alt="" class="img-game-pic"> Dead Cells: 39kr</button>
+                <button class="btn choice2"><img src="img/games/paid/logo-red-dead-redemption.jpg" alt="" class="img-game-pic"> Red Dead Redemption: 299kr.</button>
+                <button class="btn choice3"><img src="img/games/paid/logo-bloons-td-6.jpg" alt="" class="img-game-pic"> Bloons TD 6: 59kr.</button>
+            </div>
+        </section>
+
+        <!--indeks 6//Action og Eventyr-->
+        <section class="stage">
+            <h2>Action og Eventyr</h2>
+            <p>Er hvad hjertet begærer. Hvilket spil, vil du helst prøve kræfter med?</p>
+            <div class="btn-grid five-btn">
+                <button class="btn choice1"><img src="img/games/free/logo-genshin-impact.jpg" alt="" class="img-game-pic"> Dead Cells: 39kr</button>
+                <button class="btn choice2"><img src="img/games/free/logo-brawl-stars.jpg" alt="" class="img-game-pic"> Red Dead Redemption: 299kr.</button>
+                <button class="btn choice3"><img src="img/games/free/logo-pokemon-unite.jpg" alt="" class="img-game-pic"> Bloons TD 6: 59kr.</button>
+            </div>
+        </section>
+
+        <!--indeks 7//Puslespil og Hovedbrud-->
+        <section class="stage">
+            <h2>Puslespil og Hovedbrud</h2>
+            <p>Er hvad hjertet begærer. Hvilket spil, vil du helst prøve kræfter med?</p>
+            <div class="btn-grid five-btn">
+                <button class="btn choice1"><img src="img/games/paid/logo-a-little-to the-left-stars.png" alt="" class="img-game-pic"> Dead Cells: 39kr</button>
+                <button class="btn choice2"><img src="img/games/paid/logo-unblock-me-premium.jpg" alt="" class="img-game-pic"> Red Dead Redemption: 299kr.</button>
+                <button class="btn choice3"><img src="img/games/paid/logo-girl-in-the-window.jpg" alt="" class="img-game-pic"> Bloons TD 6: 59kr.</button>
+            </div>
+        </section>
+
+        <!--indeks 8//Puslespil og Hovedbrud-->
+        <section class="stage">
+            <h2>Puslespil og Hovedbrud</h2>
+            <p>Er hvad hjertet begærer. Hvilket spil, vil du helst prøve kræfter med?</p>
+            <div class="btn-grid five-btn">
+                <button class="btn choice1"><img src="img/games/free/logo-bridge-constructor.jpg" alt="" class="img-game-pic"> Dead Cells: 39kr</button>
+                <button class="btn choice2"><img src="img/games/free/logo-criss-cross-castle.jpg" alt="" class="img-game-pic"> Red Dead Redemption: 299kr.</button>
+                <button class="btn choice3"><img src="img/games/free/logo-disney-magic-match-3d.jpg" alt="" class="img-game-pic"> Bloons TD 6: 59kr.</button>
+            </div>
+        </section>
+
+        <!--indeks 9//Strategi og Simulation-->
+        <section class="stage">
+            <h2>Strategi og Simulation</h2>
+            <p>Er hvad hjertet begærer. Hvilket spil, vil du helst prøve kræfter med?</p>
+            <div class="btn-grid five-btn">
+                <button class="btn choice1"><img src="img/games/paid/logo-stardew-valley.jpg" alt="" class="img-game-pic"> Dead Cells: 39kr</button>
+                <button class="btn choice2"><img src="img/games/paid/logo-minecraft.jpg" alt="" class="img-game-pic"> Red Dead Redemption: 299kr.</button>
+                <button class="btn choice3"><img src="img/games/paid/logo-goat-simulator.jpg" alt="" class="img-game-pic"> Bloons TD 6: 59kr.</button>
+            </div>
+        </section>
+
+        <!--indeks 10//Strategi og Simulation-->
+        <section class="stage">
+            <h2>Strategi og Simulation</h2>
+            <p>Er hvad hjertet begærer. Hvilket spil, vil du helst prøve kræfter med?</p>
+            <div class="btn-grid five-btn">
+                <button class="btn choice1"><img src="img/games/free/logo-world-of-warships-legeneds-pvp.jpg" alt="" class="img-game-pic"> Dead Cells: 39kr</button>
+                <button class="btn choice2"><img src="img/games/free/logo-adorable-garden.jpg" alt="" class="img-game-pic"> Red Dead Redemption: 299kr.</button>
+                <button class="btn choice3"><img src="img/games/free/logo-good-coffee-great-coffee.jpg" alt="" class="img-game-pic"> Bloons TD 6: 59kr.</button>
+            </div>
+        </section>
+
+        <!--indeks 11//Rollespil (RPG)-->
+        <section class="stage">
+            <h2>Rollespil (RPG)</h2>
+            <p>Er hvad hjertet begærer. Hvilket spil, vil du helst prøve kræfter med?</p>
+            <div class="btn-grid five-btn">
+                <button class="btn choice1"><img src="img/games/paid/logo-children-of-morta.jpg" alt="" class="img-game-pic"> Dead Cells: 39kr</button>
+                <button class="btn choice2"><img src="img/games/paid/logo-songs-of-conquest-mobile.jpg" alt="" class="img-game-pic"> Red Dead Redemption: 299kr.</button>
+                <button class="btn choice3"><img src="img/games/paid/logo-slay-the-spire.jpg" alt="" class="img-game-pic"> Bloons TD 6: 59kr.</button>
+            </div>
+        </section>
+
+        <!--indeks 12//Rollespil (RPG)-->
+        <section class="stage">
+            <h2>Rollespil (RPG)</h2>
+            <p>Er hvad hjertet begærer. Hvilket spil, vil du helst prøve kræfter med?</p>
+            <div class="btn-grid five-btn">
+                <button class="btn choice1"><img src="img/games/free/logo-last-day-on-earth-survival.jpg" alt="" class="img-game-pic"> Dead Cells: 39kr</button>
+                <button class="btn choice2"><img src="img/games/free/logo-afk-journey.jpg" alt="" class="img-game-pic"> Red Dead Redemption: 299kr.</button>
+                <button class="btn choice3"><img src="img/games/free/logo-viking-rise.jpg" alt="" class="img-game-pic"> Bloons TD 6: 59kr.</button>
+            </div>
+        </section>
+
+        <!--indeks 13//Casual og Familie-->
+        <section class="stage">
+            <h2>Casual og Familie</h2>
+            <p>Er hvad hjertet begærer. Hvilket spil, vil du helst prøve kræfter med?</p>
+            <div class="btn-grid five-btn">
+                <button class="btn choice1"><img src="img/games/paid/logo-animal-crossing-pocket-camp-c.jpg" alt="" class="img-game-pic"> Dead Cells: 39kr</button>
+                <button class="btn choice2"><img src="img/games/paid/logo-is-this-seat-taken.jpg" alt="" class="img-game-pic"> Red Dead Redemption: 299kr.</button>
+                <button class="btn choice3"><img src="img/games/paid/logo-unpacking.jpg" alt="" class="img-game-pic"> Bloons TD 6: 59kr.</button>
+            </div>
+        </section>
+
+        <!--indeks 14//Casual og Familie-->
+        <section class="stage">
+            <h2>Casual og Familie</h2>
+            <p>Er hvad hjertet begærer. Hvilket spil, vil du helst prøve kræfter med?</p>
+            <div class="btn-grid five-btn">
+                <button class="btn choice1"><img src="img/games/free/logo-rope-dodge.jpg" alt="" class="img-game-pic"> Dead Cells: 39kr</button>
+                <button class="btn choice2"><img src="img/games/free/logo-disney-solitaire.jpg" alt="" class="img-game-pic"> Red Dead Redemption: 299kr.</button>
+                <button class="btn choice3"><img src="img/games/free/logo-gardenscapes.jpg" alt="" class="img-game-pic"> Bloons TD 6: 59kr.</button>
+            </div>
+        </section>
+
+        <!--indeks 15//Sport og Racing-->
+        <section class="stage">
+            <h2>Sport og Racing</h2>
+            <p>Er hvad hjertet begærer. Hvilket spil, vil du helst prøve kræfter med?</p>
+            <div class="btn-grid five-btn">
+                <button class="btn choice1"><img src="img/games/paid/logo-tennis-manager-25-my-player.jpg" alt="" class="img-game-pic"> Dead Cells: 39kr</button>
+                <button class="btn choice2"><img src="img/games/paid/logo-angler-adventure-fishing-sim.jpg" alt="" class="img-game-pic"> Red Dead Redemption: 299kr.</button>
+                <button class="btn choice3"><img src="img/games/paid/logo-football-chairman-pro-2.jpg" alt="" class="img-game-pic"> Bloons TD 6: 59kr.</button>
+            </div>
+        </section>
+
+        <!--indeks 16//Sport og Racing-->
+        <section class="stage">
+            <h2>Sport og Racing</h2>
+            <p>Er hvad hjertet begærer. Hvilket spil, vil du helst prøve kræfter med?</p>
+            <div class="btn-grid five-btn">
+                <button class="btn choice1"><img src="img/games/free/logo-volley-girls-high-school-story.jpg" alt="" class="img-game-pic"> Dead Cells: 39kr</button>
+                <button class="btn choice2"><img src="img/games/free/logo-haikyu-fly-high.jpg" alt="" class="img-game-pic"> Red Dead Redemption: 299kr.</button>
+                <button class="btn choice3"><img src="img/games/free/logo-golf-battle.jpg" alt="" class="img-game-pic"> Bloons TD 6: 59kr.</button>
+            </div>
+        </section>
+
+
+
+
+    </main>
+    
 </body>
 </html>
