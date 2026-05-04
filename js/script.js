@@ -8,6 +8,8 @@ const buttonSound = document.querySelectorAll("button");
 const nextStage = (e) => {
     console.log(e.target.textContent);
     switch(e.target.textContent){
+
+
         //introduktion
         case "Start din dag":
             stages[0].classList.remove("active");
@@ -17,6 +19,8 @@ const nextStage = (e) => {
             stages[1].classList.remove("active");
             stages[2].classList.add("active");
         break;
+
+
         //bruge penge vej
         case "Brug penge":
             stages[2].classList.remove("active");
@@ -119,6 +123,7 @@ const nextStage = (e) => {
                 stages[17].classList.add("active");
                 break;
 
+
         //forbind til konto vej
         case "Forbind til spilkonto":
             stages[17].classList.remove("active");
@@ -144,15 +149,7 @@ const nextStage = (e) => {
                 stages[19].classList.remove("active");
                 stages[21].classList.add("active");
             break;
-        //start "spil" for bruger scene 1 vej
-        case "Start spil":
-                stages[21].classList.remove("active");
-                stages[25].classList.add("active");
-        break;
-        case "Start dit spil":
-            stages[23].classList.remove("active");
-            stages[25].classList.add("active");
-        break;
+
 
         //indtast oplysninger vej
         case "Indtast oplysninger":
@@ -171,6 +168,22 @@ const nextStage = (e) => {
                     stages[20].classList.remove("active");
                     stages[24].classList.add("active");
                 break;
+                        case "Forbind via spilkonto":
+                            stages[24].classList.remove("active");
+                            stages[19].classList.add("active");
+                        break;
+                        case "Vælg et andet spil":
+                            stages[24].classList.remove("active");
+                            stages[3].classList.add("active");
+                        break;
+                        case "Find et gratis spil":
+                            stages[24].classList.remove("active");
+                            stages[4].classList.add("active");
+                        break;
+        case "Bekræft alligevel":
+            stages[22].classList.remove("active");
+            stages[21].classList.add("active");
+        break;
         case "Del kun navn og kort":
                 stages[22].classList.remove("active");
                 stages[23].classList.add("active");
@@ -181,6 +194,120 @@ const nextStage = (e) => {
         break;
     
         //download gratis vej
+        case "Download gratis":
+            stages[2].classList.remove("active");
+            stages[4].classList.add("active");
+        break;
+        case "Action & Eventyr":
+            stages[4].classList.remove("active");
+            stages[6].classList.add("active");
+        break;
+                case "Genshin Impact":
+                    stages[6].classList.remove("active");
+                    stages[18].classList.add("active");
+                break;
+                case "Brawl Stars":
+                    stages[6].classList.remove("active");
+                    stages[18].classList.add("active");
+                break;
+                case "Pokémon Unite":
+                    stages[6].classList.remove("active");
+                    stages[18].classList.add("active");
+                break;
+        case "Puslespil & Hovedbrud":
+            stages[4].classList.remove("active");
+            stages[8].classList.add("active");
+        break;
+                case "Bridge Constructor Studio":
+                stages[8].classList.remove("active");
+                stages[18].classList.add("active");
+                break;
+                case "Criss Cross Castle":
+                stages[8].classList.remove("active");
+                stages[18].classList.add("active");
+                break;
+                case "Disney Magic Match 3D":
+                stages[8].classList.remove("active");
+                stages[18].classList.add("active");
+                break;
+        case "Strategi & Simulation":
+            stages[4].classList.remove("active");
+            stages[10].classList.add("active");
+        break;
+                case "World of Warships: Legends PvP":
+                stages[10].classList.remove("active");
+                stages[18].classList.add("active");
+                break;
+                case "Adorable Garden":
+                stages[10].classList.remove("active");
+                stages[18].classList.add("active");
+                break;
+                case "Good Coffee, Great Coffee":
+                stages[10].classList.remove("active");
+                stages[18].classList.add("active");
+                break;
+        case "Rollespil-(RPG)":
+            stages[4].classList.remove("active");
+            stages[12].classList.add("active");
+        break;
+                case "Last Day On Earth: Survival":
+                stages[12].classList.remove("active");
+                stages[18].classList.add("active");
+                break;
+                case "AFK Journey":
+                stages[12].classList.remove("active");
+                stages[18].classList.add("active");
+                break;
+                case "Viking Rise":
+                stages[12].classList.remove("active");
+                stages[18].classList.add("active");
+                break;
+        case "Casual & Familie":
+            stages[4].classList.remove("active");
+            stages[14].classList.add("active");
+        break;
+                case "Rope Dodge":
+                stages[14].classList.remove("active");
+                stages[18].classList.add("active");
+                break;
+                case "Disney Solitaire":
+                stages[14].classList.remove("active");
+                stages[18].classList.add("active");
+                break;
+                case "Gardenscapes":
+                stages[14].classList.remove("active");
+                stages[18].classList.add("active");
+                break;
+        case "Sport & Racing":
+            stages[4].classList.remove("active");
+            stages[16].classList.add("active");
+        break;
+                case "Volley Girls:High School Story":
+                stages[16].classList.remove("active");
+                stages[18].classList.add("active");
+                break;
+                case "HAIKYU!! FLY HIGH":
+                stages[16].classList.remove("active");
+                stages[18].classList.add("active");
+                break;
+                case "Golf Battle":
+                stages[16].classList.remove("active");
+                stages[18].classList.add("active");
+                break;
+
+
+        case "Start spil":
+            stages[18].classList.remove("active");
+            stages[21].classList.remove("active");
+            stages[23].classList.remove("active"); //---------------------------------------------<<<<<<<OBS nr 23??
+            stages[25].classList.add("active");
+        break;
+
+        //---------------------------------
+        //Akt 2 begynder
+        //---------------------------------
+
+        
     }
 };
 
