@@ -307,7 +307,101 @@ const nextStage = (e) => {
         //Akt 2 begynder
         //---------------------------------
 
+        //Alt med cookies vej
+        case "Administrer muligheder":
+            stages[25].classList.remove("active");
+            stages[26].classList.add("active");
+        break;
+        case "Giv samtykke":
+            stages[25].classList.remove("active");
+            stages[27].classList.add("active");
+        break;
+        case "Bekræft dine valg (som de er)":
+            stages[26].classList.remove("active");
+            stages[29].classList.remove("active");
+            stages[28].classList.add("active");
+        break;
+        case "Acceptér alle":
+            stages[26].classList.remove("active");
+            stages[29].classList.remove("active");
+            stages[27].classList.add("active");
+        break;
+        case "Læs “Præferencer for leverandører”":
+            stages[26].classList.remove("active");
+            stages[29].classList.add("active");
+        break;
+        case "Fortsæt...":
+            stages[27].classList.remove("active");
+            stages[28].classList.remove("active");
+            stages[31].classList.add("active");
+        break;
+        case "Manuelt slå alt fra før du går videre":
+            stages[29].classList.remove("active");
+            stages[30].classList.add("active");
+        break;
+        case "START":
+            stages[30].classList.remove("active");
+            stages[31].classList.add("active");
+        break;
+
+        //Opnå rewards vej
+        case "No way! Get'cha head in the game":
+            stages[31].classList.remove("active");
+            stages[32].classList.add("active");
+        break;
+                case "Smid en 50'er på cool upgrades":
+                    stages[32].classList.remove("active");
+                    stages[35].classList.add("active");
+                break;
+                case "Se reklamer":
+                    stages[32].classList.remove("active");
+                    stages[36].classList.add("active");
+                break;
+                case "Ignorer og spil videre":
+                    stages[32].classList.remove("active");
+                    stages[38].classList.add("active");
+                break;                
+        case "Lyt med ét øre":
+            stages[31].classList.remove("active");
+            stages[33].classList.add("active");
+        break;
+                case "“Hov, kan du gentage det?”":
+                    stages[33].classList.remove("active");
+                    stages[34].classList.add("active");
+                break;
+                case "Fortsæt i din egen lille verden":
+                    stages[33].classList.remove("active");
+                    stages[34].classList.remove("active");
+                    stages[32].classList.add("active");
+                break;
+        case "Gud ja, det var vist en god idé at lytte":
+            stages[31].classList.remove("active");
+            stages[34].classList.add("active");
+        break;
+                case "Lad mig spille med!!!":
+                    stages[34].classList.remove("active");
+                    stages[39].classList.add("active");
+                break;
+        case "Del, anmeld og få din præmie!":
+            stages[35].classList.remove("active");
+            stages[36].classList.remove("active");
+            stages[37].classList.add("active");
+        break;
+        case "Spil bare videre":
+            stages[35].classList.remove("active");
+            stages[36].classList.remove("active");
+            stages[38].classList.add("active");
+        break;
+        case "Gameeee":
+            stages[37].classList.remove("active");
+            stages[38].classList.remove("active");
+            stages[40].classList.add("active");
+        break;
         
+
+
+        //Quiz om kantinekupon vej
+
     }
 };
 
