@@ -402,7 +402,15 @@ const nextStage = (e) => {
 
         //Quiz om kantinekupon vej
 
+
     }
+    //For at bruger starter i "toppen" af hver ny case og ikke hvor de sidst var placeret, hvis de har scrollet
+    setTimeout(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: "auto"
+        });
+        }, 50);
 };
 
 buttonSound.forEach(button => {

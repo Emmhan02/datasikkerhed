@@ -27,7 +27,7 @@ $img-border-radius: 15px;
 *{
     box-sizing: border-box;
     margin: 0;
-    font-family: partial.$font-family;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 body{
@@ -73,15 +73,9 @@ main{
             50%     {transform: translateY(15px);}
             100%    {transform: translateY(0);}
         }
+    }
 
-}
-
-.cookieees{
-    max-width: 100px;
-    height: 100px;
-}
-
-.img-logo-placement{
+.img-for-game-logos{
     display: flex;
     justify-content: space-around;
     margin-top: 50px;
@@ -99,11 +93,6 @@ h1{
     font-size: 2.5em;
 }
 
-a{
-    text-decoration: none;
-    color: $font-color;
-}
-
 h2{
     font-style: italic;
     font-size: 30px;
@@ -118,6 +107,13 @@ p{
     justify-content: center;
     line-height: 1.4em;
     font-size: 1.3em;
+}
+
+.cookieees{
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
 }
 
 //Ensartet styling på buttons
