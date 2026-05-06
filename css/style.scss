@@ -1,5 +1,5 @@
 $bg-color: #FBF7F4;
-$scene-border-color: #321205;
+$scene-border-color: #A18276;
 $scene-border-size: 7px; 
 
 $font-color: #212529;
@@ -21,8 +21,9 @@ $box-shadow-color: #CFCFCF;
 $img-border-color:grey;
 $img-border-radius: 15px;
 
-//Ensartet styling generel
 
+
+//Ensartet styling generel
 *{
     box-sizing: border-box;
     margin: 0;
@@ -42,13 +43,15 @@ main{
     border-radius: 30px;
     width: auto;
     min-height: 90vh;
-    max-height: 100vh;
+    max-height: auto;
 }
 
 .stage{
     display: none;
     margin: 0 auto;
     max-width: 80vw;
+    margin-bottom: 20px;
+    flex-direction: column;
     &.active{
         display: block;
         text-align: center;
@@ -57,12 +60,73 @@ main{
 
 .img-game-pic{
     height: auto;
-    width: 60px;
+    width: 200px;
     border-radius: $img-border-radius;
     border: 2px solid $img-border-color;
-}
-//Styling på tekst
+    margin: 30px 35px;
 
+        &:hover{
+            animation: bounce 1.3s ease-in-out 5;
+        }
+        @keyframes bounce{
+            0%      {transform: translateY(0);}
+            50%     {transform: translateY(15px);}
+            100%    {transform: translateY(0);}
+        }
+    }
+
+.img-for-game-logos{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+//styling på alt tilhørende musik
+.music-btn{
+    width: 200px;
+    font-size: 12px;
+    padding: 5px;
+    border: 2px solid $scene-border-color;
+    border-radius: 5px;
+    box-shadow: none;
+        &:hover{
+            background-color: $scene-border-color;
+        }
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100px;
+  height: 6px;
+  background: $scene-border-color; /* selve slider-banen */
+  border-radius: 5px;
+  outline: none;
+}
+
+/* selve "knoppen" */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: $bg-color;
+  border: 2px solid $font-color;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+label{
+    font-size: 12px;
+    padding: 8px;
+}
+
+.music-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+//Styling på tekst
 h1, h2{
     display: flex;
     justify-content: center;
@@ -74,6 +138,11 @@ h1{
     font-size: 2.5em;
 }
 
+a{
+    text-decoration: none;
+    color: $font-color;
+}
+
 h2{
     font-style: italic;
     font-size: 30px;
@@ -83,21 +152,32 @@ h2{
 
 p{
     margin: auto 5em;
-    padding: 40px;
+    padding: 20px;
     display: flex;
     justify-content: center;
     line-height: 1.4em;
     font-size: 1.3em;
 }
 
+.cookieees{
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
 //Ensartet styling på buttons
 button{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
     border-radius: $img-border-radius;
     height: auto;
     width: 50%;
     padding: 15px;
     margin: 5px;
-    box-shadow: 0px 5px $box-shadow-color;
+    box-shadow: 0px 3px $box-shadow-color;
+    align-items: center;
 
         &:hover{
             cursor: pointer;
@@ -110,6 +190,7 @@ button{
             transition-duration: 0.5s;
         }
 }
+
 
 //Individuel styling på buttons
 .choice1{
@@ -159,3 +240,20 @@ button{
             background-color: $choice6-color;
         }
 }
+
+.choice{
+    box-shadow: none;
+    border: 2px solid $scene-border-color;
+        &:hover{
+            cursor: auto;
+            transition-duration: none;
+        }
+
+        &:active{
+            box-shadow: none;
+            transform: none;
+            transition-duration: none;
+        }
+}
+
+//Kontaktform

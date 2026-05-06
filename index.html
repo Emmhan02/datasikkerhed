@@ -4,76 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>En dag med datasikkerhed</title>
+    <script src="https://kit.fontawesome.com/0140d38ad3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
 </head>
 <body>
+    <audio id="bg-music" autoplay loop>
+        <source src="sound/bensound-theelevatorbossanova.mp3">
+    </audio>
 
     <main>
-        <h1>En dag med datasikkerhed</h1>
+        <h1><a href="https://insp-emma.dk/">En dag med datasikkerhed</a></h1>  
+        
+        <div class="music-div">
+            <button onclick="toggleMusic()" class="music-btn"><i class="fa-brands fa-itunes-note" style="color: #a18276;"></i>Tænd/sluk musik</button>
+            <label for="volume">Lydstyrke:</label>
+            <input type="range" id="volume" min="0" max="1" step="0.01" onchange="setVolume(this.value)">
+        </div>
+        
         <!--indeks 0-->
         <section class="stage active">
-            <h2>Velkommen</h2>
-            <p>Forestil dig, at du er studerende på en videregående uddannelse. I skal egentligt bruge dagen på at lære omkring datasikkerhed, men det er sådan et bredt emne, ooog... <br>Du føler dig slet ikke motiveret til at lære noget på sådan en helt almindelig dag som i dag. Nå, man har ikke altid et valg, så vi må hellere komme i gang.</p>
-            <button class="btn choice1">Start din dag</button>
+            <h2>Introduktion</h2>
+                <p>Hvad er data? <br> Data er en form for information, som du deler enten bevidst eller ubevidst, når du er online. Når du deler data, så får andre adgang til information om dig. Det kan være ting som dit fulde navn, tlf. nr, e-mail, skærmtid, IP-adresse, købshistorik, kontaktliste, videoer, dine enhedsoplysninger og meget mere. Det er ikke nødvendigvis en dårlig ting. Mange virksomheder bruger denne information til at studere din adfærd, så de kan målrette annoncer eller tilpasse eks. spil til dig, så du så vidt muligt kun ser ting, der er relevante for dig og får en god brugeroplevelse. <br> <br>Problemet kan opstå, hvis nogen vil bruge de her informationer til at skade dig. Det kan være, du har delt dit kort med en hjemmeside, og de bliver hacket. Nu har hackeren også dine oplysninger. Det kan også være, at du har delt hvilken butik, du ofte handler i. Nu er risikoen potentielt øget for, at en fremmed holder øje med butikken for at finde dig, så de måske kan se, hvor du bor. De vil kunne lære din rutine og udnytte dine informationer til at begå identitetstyveri, måske bare almindeligt indbrud, når de ved, du ikke er hjemme eller værre... <br> <br>Men nok om det: I denne leg, jeg gerne vil lege med dig, kan det slet ikke gå så galt. <br><br> Alt du skal gøre er, at trykke på nogle knapper hist og her. Nogle valg har ingen betydning. Andre valg påvirker, hvor meget information jeg får adgang til omkring dig. De valg der påvirker, hvor meget information du deler, vil få vidst en emoji, når du har klikket på en knap. De vil se sådan her ud.</p>
+                <button class="best-choice choice"><i class="fa-regular fa-face-laugh-beam fa-lg" style="color: #a18276;"></i> = Godt valg: Jeg får kun den mest nødvendige data omkring dig</button>
+                <button class="fine-choice choice"><i class="fa-regular fa-face-grin fa-lg" style="color: #a18276;"></i> = Okay valg: Jeg får lidt ekstra data omkring dig</button>
+                <button class="bad-choice choice"><i class="fa-regular fa-face-frown fa-lg" style="color: #a18276;"></i> = Dårligt valg: Jeg får meget ekstra data omkring dig</button>
+                <p>Når du er klar, så tryk på knappen herunder:</p>
+                <button class="btn choice1">Start din dag</button>
         </section>
 
-        <!--indeks 1//Start-->
+        <!--indeks 1//En helt almindelig tirsdag-->
         <section class="stage">
-            <h2>I klasseværelset</h2>
-            <p>På trods af udsigten til at skulle bruge dagen på at lære om datasikkerhed, så lykkedes det dig alligevel at komme ud af døren og i skole. Din plads er bagerst i lokalet, og du forsøger virkelig at lytte til din lærer... <br><br>Han snakker vidst om noget med.. at fiske? Altså, det har det bare overhovedet ikke noget at gøre med det der sikkerhedspjat. Hvis du har brug for et øjeblik til dig selv, så kan du altid downloade et spil på din computer, så hovedet lige kan få en pause fra din lærer og alle de fisk, som han åbenbart har.
+            <h2>En helt almindelig tirsdag</h2>
+            <p>Du er studerende på en erhvervsakademiuddannelse, og i dag skal I bruge hele dagen på at lære om datasikkerhed. <br> <br> På trods af udsigten til at skulle bruge dagen på at lære om datasikkerhed, så lykkedes det dig alligevel at komme ud af døren og i skole. Din plads er bagerst i lokalet, og du forsøger virkelig at lytte til din lærer... <br><br>Han snakker vidst om noget med.. at fiske? Altså, hvordan kan fisk have noget at gøre med datasikkerhed? Det er så kedeligt, at du har svært ved at holde fokus. Hvis du har brug for et øjeblik til dig selv, så kan du altid downloade et spil på din computer, så hovedet lige kan få en pause fra din lærer og alle de fisk, som han åbenbart har.
             </p>
-            <div class="btn-grid three-btn">
-                <button class="btn choice1">Download spil</button>
-            </div>
+                <button class="btn choice1">Vælg spil</button>
         </section>
 
         <!--indeks 2//Download spil-->
         <section class="stage">
             <h2>At downloade et spil</h2>
-            <p>Hvem kunne ikke bruge en pause i ny og næ? Du vælger altså at åbne din pc. Læreren tror 100% på, at du lytter aktivt og bare vil skrive nogle rigtig gode noter om alle hans fisk. <br> Trin 1 er at åbne din app-store, så det er så nemt og dejligt. <br> Trin 2 er at beslutte, om du vil bruge penge på et spil eller ej? Før du tager din beslutning, vil jeg bare lige hurtigt nævne, at de serverer din livret i kantinen i dag&#128525;</p>
-            <div class="btn-grid two-btn">
+            <p>Hvem kunne ikke bruge en pause i ny og næ? Du vælger altså at åbne din pc. Læreren tror 100% på, at du lytter aktivt og bare vil skrive nogle rigtig gode noter om alle hans fisk. <br><br>Trin 1 er at åbne din app-store, så det har du hurtigt gjort.<br>Trin 2 er at beslutte, om du vil bruge penge på et spil eller ej?<br><br>Før du tager din beslutning, vil jeg bare lige hurtigt nævne, at de serverer din livret i kantinen i dag&#128525;</p>
                 <button class="btn choice1">Brug penge</button>
                 <button class="btn choice2">Download gratis</button>
-            </div>
         </section>
 
         <!--indeks 3//Brug penge-->
         <section class="stage">
             <h2>Big spender</h2>
             <p>Penge har du åbenbart nok af - jeg er glad på dine vegne!&#128523; <br> Så er næste trin jo så at finde ud af, hvilken slags spil, du kan lide at spille?</p>
-            <div class="btn-grid three-btn">
-                <button class="btn choice1">Action & Eventyr</button>
-                <button class="btn choice2">Puslespil & Hovedbrud</button>
-                <button class="btn choice3">Strategi & Simulation</button>
+                <button class="btn choice1">Action og Eventyr</button>
+                <button class="btn choice2">Puslespil og Hovedbrud</button>
+                <button class="btn choice3">Strategi og Simulation</button>
                 <button class="btn choice4">Rollespil(RPG)</button>
-                <button class="btn choice5">Casual & Familie</button>
-                <button class="btn choice6">Sport & Racing</button>
-            </div>
+                <button class="btn choice5">Casual og Familie</button>
+                <button class="btn choice6">Sport og Racing</button>
         </section>
 
         <!--indeks 4//Download gratis-->
         <section class="stage">
             <h2>Joachim Von And</h2>
             <p>Som verdens nok mest kendte and, har du valgt at bruge dine penge med omhu - gratis spil er der nok af, så du er ikke i tvivl om, at du nok skal finde noget spændende! <br> Så er næste trin jo så at finde ud af, hvilken slags spil, du kan lide at spille?</p>
-            <div class="btn-grid four-btn">
                 <button class="btn choice1">Action & Eventyr</button>
                 <button class="btn choice2">Puslespil & Hovedbrud</button>
                 <button class="btn choice3">Strategi & Simulation</button>
-                <button class="btn choice4">Rollespil(RPG)</button>
+                <button class="btn choice4">Rollespil-(RPG)</button>
                 <button class="btn choice5">Casual & Familie</button>
                 <button class="btn choice6">Sport & Racing</button>
-            </div>
         </section>
 
         <!--indeks 5//Action og Eventyr-->
         <section class="stage">
             <h2>Action og Eventyr</h2>
             <p>Er hvad hjertet begærer. Hvilket spil, vil du helst prøve kræfter med?</p>
-            <div class="btn-grid five-btn">
-                <button class="btn choice1"><img src="img/games/paid/logo-dead-cells.jpg" alt="" class="img-game-pic"> Dead Cells: 39kr</button>
-                <button class="btn choice2"><img src="img/games/paid/logo-red-dead-redemption.jpg" alt="" class="img-game-pic"> Red Dead Redemption: 299kr.</button>
-                <button class="btn choice3"><img src="img/games/paid/logo-bloons-td-6.jpg" alt="" class="img-game-pic"> Bloons TD 6: 59kr.</button>
+                <button class="btn choice1">Dead Cells: 39kr.</button>
+                <button class="btn choice2">Red Dead Redemption: 299kr.</button>
+                <button class="btn choice3">Bloons TD 6: 59kr.</button>
+            <div class="img-for-game-logos">
+                <img src="img/games/paid/logo-dead-cells.jpg" alt="" class="img-game-pic">
+                <img src="img/games/paid/logo-red-dead-redemption.jpg" alt="" class="img-game-pic">
+                <img src="img/games/paid/logo-bloons-td-6.jpg" alt="" class="img-game-pic">
             </div>
         </section>
 
@@ -81,125 +91,390 @@
         <section class="stage">
             <h2>Action og Eventyr</h2>
             <p>Er hvad hjertet begærer. Hvilket spil, vil du helst prøve kræfter med?</p>
-            <div class="btn-grid five-btn">
-                <button class="btn choice1"><img src="img/games/free/logo-genshin-impact.jpg" alt="" class="img-game-pic"> Dead Cells: 39kr</button>
-                <button class="btn choice2"><img src="img/games/free/logo-brawl-stars.jpg" alt="" class="img-game-pic"> Red Dead Redemption: 299kr.</button>
-                <button class="btn choice3"><img src="img/games/free/logo-pokemon-unite.jpg" alt="" class="img-game-pic"> Bloons TD 6: 59kr.</button>
-            </div>
+                <button class="btn choice1">Genshin Impact</button>
+                <button class="btn choice2">Brawl Stars</button>
+                <button class="btn choice3">Pokémon Unite</button>
+                    <div class="img-for-game-logos">
+                        <img src="img/games/free/logo-genshin-impact.jpg" alt="" class="img-game-pic">
+                        <img src="img/games/free/logo-brawl-stars.jpg" alt="" class="img-game-pic">
+                        <img src="img/games/free/logo-pokemon-unite.jpg" alt="" class="img-game-pic">
+                    </div>
         </section>
 
         <!--indeks 7//Puslespil og Hovedbrud-->
         <section class="stage">
             <h2>Puslespil og Hovedbrud</h2>
             <p>Er hvad hjertet begærer. Hvilket spil, vil du helst prøve kræfter med?</p>
-            <div class="btn-grid five-btn">
-                <button class="btn choice1"><img src="img/games/paid/logo-a-little-to the-left-stars.png" alt="" class="img-game-pic"> Dead Cells: 39kr</button>
-                <button class="btn choice2"><img src="img/games/paid/logo-unblock-me-premium.jpg" alt="" class="img-game-pic"> Red Dead Redemption: 299kr.</button>
-                <button class="btn choice3"><img src="img/games/paid/logo-girl-in-the-window.jpg" alt="" class="img-game-pic"> Bloons TD 6: 59kr.</button>
-            </div>
+                <button class="btn choice1">A Little To The Left: Stars: 29kr.</button>
+                <button class="btn choice2">Unblock Me Premium: 9kr.</button>
+                <button class="btn choice3">Girl In The Window: 19kr.</button>
+                    <div class="img-for-game-logos">
+                        <img src="img/games/paid/logo-a-little-to the-left-stars.png" alt="" class="img-game-pic">
+                        <img src="img/games/paid/logo-unblock-me-premium.jpg" alt="" class="img-game-pic">
+                        <img src="img/games/paid/logo-girl-in-the-window.jpg" alt="" class="img-game-pic">
+                    </div>
         </section>
 
         <!--indeks 8//Puslespil og Hovedbrud-->
         <section class="stage">
             <h2>Puslespil og Hovedbrud</h2>
             <p>Er hvad hjertet begærer. Hvilket spil, vil du helst prøve kræfter med?</p>
-            <div class="btn-grid five-btn">
-                <button class="btn choice1"><img src="img/games/free/logo-bridge-constructor.jpg" alt="" class="img-game-pic"> Dead Cells: 39kr</button>
-                <button class="btn choice2"><img src="img/games/free/logo-criss-cross-castle.jpg" alt="" class="img-game-pic"> Red Dead Redemption: 299kr.</button>
-                <button class="btn choice3"><img src="img/games/free/logo-disney-magic-match-3d.jpg" alt="" class="img-game-pic"> Bloons TD 6: 59kr.</button>
-            </div>
+                <button class="btn choice1">Bridge Constructor Studio</button>
+                <button class="btn choice2">Criss Cross Castle</button>
+                <button class="btn choice3">Disney Magic Match 3D</button>
+                    <div class="img-for-game-logos">
+                        <img src="img/games/free/logo-bridge-constructor.jpg" alt="" class="img-game-pic">
+                        <img src="img/games/free/logo-criss-cross-castle.jpg" alt="" class="img-game-pic">
+                        <img src="img/games/free/logo-disney-magic-match-3d.jpg" alt="" class="img-game-pic">
+                    </div>
         </section>
 
         <!--indeks 9//Strategi og Simulation-->
         <section class="stage">
             <h2>Strategi og Simulation</h2>
             <p>Er hvad hjertet begærer. Hvilket spil, vil du helst prøve kræfter med?</p>
-            <div class="btn-grid five-btn">
-                <button class="btn choice1"><img src="img/games/paid/logo-stardew-valley.jpg" alt="" class="img-game-pic"> Dead Cells: 39kr</button>
-                <button class="btn choice2"><img src="img/games/paid/logo-minecraft.jpg" alt="" class="img-game-pic"> Red Dead Redemption: 299kr.</button>
-                <button class="btn choice3"><img src="img/games/paid/logo-goat-simulator.jpg" alt="" class="img-game-pic"> Bloons TD 6: 59kr.</button>
-            </div>
+                <button class="btn choice1">Stardew Valley: 39kr.</button>
+                <button class="btn choice2">Minecraft: 59kr.</button>
+                <button class="btn choice3">Goat Simulator 3: 99kr.</button>
+                    <div class="img-for-game-logos">
+                        <img src="img/games/paid/logo-stardew-valley.jpg" alt="" class="img-game-pic">
+                        <img src="img/games/paid/logo-minecraft.jpg" alt="" class="img-game-pic">
+                        <img src="img/games/paid/logo-goat-simulator.jpg" alt="" class="img-game-pic">
+                    </div>
         </section>
 
         <!--indeks 10//Strategi og Simulation-->
         <section class="stage">
             <h2>Strategi og Simulation</h2>
             <p>Er hvad hjertet begærer. Hvilket spil, vil du helst prøve kræfter med?</p>
-            <div class="btn-grid five-btn">
-                <button class="btn choice1"><img src="img/games/free/logo-world-of-warships-legeneds-pvp.jpg" alt="" class="img-game-pic"> Dead Cells: 39kr</button>
-                <button class="btn choice2"><img src="img/games/free/logo-adorable-garden.jpg" alt="" class="img-game-pic"> Red Dead Redemption: 299kr.</button>
-                <button class="btn choice3"><img src="img/games/free/logo-good-coffee-great-coffee.jpg" alt="" class="img-game-pic"> Bloons TD 6: 59kr.</button>
-            </div>
+                <button class="btn choice1">World of Warships: Legends PvP</button>
+                <button class="btn choice2">Adorable Garden</button>
+                <button class="btn choice3">Good Coffee, Great Coffee</button>
+                    <div class="img-for-game-logos">
+                        <img src="img/games/free/logo-world-of-warships-legeneds-pvp.jpg" alt="" class="img-game-pic">
+                        <img src="img/games/free/logo-good-coffee-great-coffee.jpg" alt="" class="img-game-pic">
+                        <img src="img/games/free/logo-adorable-garden.jpg" alt="" class="img-game-pic">
+                    </div>
         </section>
 
         <!--indeks 11//Rollespil (RPG)-->
         <section class="stage">
             <h2>Rollespil (RPG)</h2>
             <p>Er hvad hjertet begærer. Hvilket spil, vil du helst prøve kræfter med?</p>
-            <div class="btn-grid five-btn">
-                <button class="btn choice1"><img src="img/games/paid/logo-children-of-morta.jpg" alt="" class="img-game-pic"> Dead Cells: 39kr</button>
-                <button class="btn choice2"><img src="img/games/paid/logo-songs-of-conquest-mobile.jpg" alt="" class="img-game-pic"> Red Dead Redemption: 299kr.</button>
-                <button class="btn choice3"><img src="img/games/paid/logo-slay-the-spire.jpg" alt="" class="img-game-pic"> Bloons TD 6: 59kr.</button>
-            </div>
+                <button class="btn choice1">Children of Morta: 59kr.</button>
+                <button class="btn choice2">Songs of Conquest Mobile: 99kr.</button>
+                <button class="btn choice3">Slay the Spire: 89kr.</button>
+                    <div class="img-for-game-logos">
+                        <img src="img/games/paid/logo-children-of-morta.jpg" alt="" class="img-game-pic">
+                        <img src="img/games/paid/logo-songs-of-conquest-mobile.jpg" alt="" class="img-game-pic">
+                        <img src="img/games/paid/logo-slay-the-spire.jpg" alt="" class="img-game-pic">
+                    </div>
         </section>
 
         <!--indeks 12//Rollespil (RPG)-->
         <section class="stage">
             <h2>Rollespil (RPG)</h2>
             <p>Er hvad hjertet begærer. Hvilket spil, vil du helst prøve kræfter med?</p>
-            <div class="btn-grid five-btn">
-                <button class="btn choice1"><img src="img/games/free/logo-last-day-on-earth-survival.jpg" alt="" class="img-game-pic"> Dead Cells: 39kr</button>
-                <button class="btn choice2"><img src="img/games/free/logo-afk-journey.jpg" alt="" class="img-game-pic"> Red Dead Redemption: 299kr.</button>
-                <button class="btn choice3"><img src="img/games/free/logo-viking-rise.jpg" alt="" class="img-game-pic"> Bloons TD 6: 59kr.</button>
-            </div>
+                <button class="btn choice1">Last Day On Earth: Survival</button>
+                <button class="btn choice2">AFK Journey</button>
+                <button class="btn choice3">Viking Rise</button>
+                    <div class="img-for-game-logos">
+                        <img src="img/games/free/logo-last-day-on-earth-survival.jpg" alt="" class="img-game-pic">
+                        <img src="img/games/free/logo-afk-journey.jpg" alt="" class="img-game-pic">
+                        <img src="img/games/free/logo-viking-rise.jpg" alt="" class="img-game-pic">
+                    </div>
         </section>
 
         <!--indeks 13//Casual og Familie-->
         <section class="stage">
             <h2>Casual og Familie</h2>
             <p>Er hvad hjertet begærer. Hvilket spil, vil du helst prøve kræfter med?</p>
-            <div class="btn-grid five-btn">
-                <button class="btn choice1"><img src="img/games/paid/logo-animal-crossing-pocket-camp-c.jpg" alt="" class="img-game-pic"> Dead Cells: 39kr</button>
-                <button class="btn choice2"><img src="img/games/paid/logo-is-this-seat-taken.jpg" alt="" class="img-game-pic"> Red Dead Redemption: 299kr.</button>
-                <button class="btn choice3"><img src="img/games/paid/logo-unpacking.jpg" alt="" class="img-game-pic"> Bloons TD 6: 59kr.</button>
-            </div>
+                <button class="btn choice1">Animal Crossing: Pocket Camp C: 149kr.</button>
+                <button class="btn choice2">Is This Seat Taken: 69kr.</button>
+                <button class="btn choice3">Unpacking: 89kr.</button>
+                    <div class="img-for-game-logos">
+                        <img src="img/games/paid/logo-animal-crossing-pocket-camp-c.jpg" alt="" class="img-game-pic">
+                        <img src="img/games/paid/logo-is-this-seat-taken.jpg" alt="" class="img-game-pic">
+                        <img src="img/games/paid/logo-unpacking.jpg" alt="" class="img-game-pic">
+                    </div>
         </section>
 
         <!--indeks 14//Casual og Familie-->
         <section class="stage">
             <h2>Casual og Familie</h2>
             <p>Er hvad hjertet begærer. Hvilket spil, vil du helst prøve kræfter med?</p>
-            <div class="btn-grid five-btn">
-                <button class="btn choice1"><img src="img/games/free/logo-rope-dodge.jpg" alt="" class="img-game-pic"> Dead Cells: 39kr</button>
-                <button class="btn choice2"><img src="img/games/free/logo-disney-solitaire.jpg" alt="" class="img-game-pic"> Red Dead Redemption: 299kr.</button>
-                <button class="btn choice3"><img src="img/games/free/logo-gardenscapes.jpg" alt="" class="img-game-pic"> Bloons TD 6: 59kr.</button>
-            </div>
+                <button class="btn choice1">Rope Dodge</button>
+                <button class="btn choice2">Disney Solitaire</button>
+                <button class="btn choice3">Gardenscapes</button>
+                    <div class="img-for-game-logos">
+                        <img src="img/games/free/logo-rope-dodge.jpg" alt="" class="img-game-pic">
+                        <img src="img/games/free/logo-disney-solitaire.jpg" alt="" class="img-game-pic">
+                        <img src="img/games/free/logo-gardenscapes.jpg" alt="" class="img-game-pic">
+                    </div>
         </section>
 
         <!--indeks 15//Sport og Racing-->
         <section class="stage">
             <h2>Sport og Racing</h2>
             <p>Er hvad hjertet begærer. Hvilket spil, vil du helst prøve kræfter med?</p>
-            <div class="btn-grid five-btn">
-                <button class="btn choice1"><img src="img/games/paid/logo-tennis-manager-25-my-player.jpg" alt="" class="img-game-pic"> Dead Cells: 39kr</button>
-                <button class="btn choice2"><img src="img/games/paid/logo-angler-adventure-fishing-sim.jpg" alt="" class="img-game-pic"> Red Dead Redemption: 299kr.</button>
-                <button class="btn choice3"><img src="img/games/paid/logo-football-chairman-pro-2.jpg" alt="" class="img-game-pic"> Bloons TD 6: 59kr.</button>
-            </div>
+                <button class="btn choice1">Tennis Manager 25 - MY PLAYER: 79kr.</button>
+                <button class="btn choice2">Angler Adventures: Fishing Sim 9kr.</button>
+                <button class="btn choice3">Football Chariman Pro 2: 39kr.</button>
+                    <div class="img-for-game-logos">
+                        <img src="img/games/paid/logo-tennis-manager-25-my-player.jpg" alt="" class="img-game-pic">
+                        <img src="img/games/paid/logo-angler-adventure-fishing-sim.jpg" alt="" class="img-game-pic">
+                        <img src="img/games/paid/logo-football-chairman-pro-2.jpg" alt="" class="img-game-pic">
+                    </div>
         </section>
 
         <!--indeks 16//Sport og Racing-->
         <section class="stage">
             <h2>Sport og Racing</h2>
             <p>Er hvad hjertet begærer. Hvilket spil, vil du helst prøve kræfter med?</p>
-            <div class="btn-grid five-btn">
-                <button class="btn choice1"><img src="img/games/free/logo-volley-girls-high-school-story.jpg" alt="" class="img-game-pic"> Dead Cells: 39kr</button>
-                <button class="btn choice2"><img src="img/games/free/logo-haikyu-fly-high.jpg" alt="" class="img-game-pic"> Red Dead Redemption: 299kr.</button>
-                <button class="btn choice3"><img src="img/games/free/logo-golf-battle.jpg" alt="" class="img-game-pic"> Bloons TD 6: 59kr.</button>
-            </div>
+                <button class="btn choice1">Volley Girls:High School Story</button>
+                <button class="btn choice2">HAIKYU!! FLY HIGH</button>
+                <button class="btn choice3">Golf Battle</button>
+                    <div class="img-for-game-logos">
+                        <img src="img/games/free/logo-volley-girls-high-school-story.jpg" alt="" class="img-game-pic">
+                        <img src="img/games/free/logo-haikyu-fly-high.jpg" alt="" class="img-game-pic">
+                        <img src="img/games/free/logo-golf-battle.jpg" alt="" class="img-game-pic">
+                    </div>
         </section>
 
+        <!--indeks 17//Klar til at spille!!! Næsten-->
+        <section class="stage">
+            <h2>Klar til at spille!!! Næsten</h2>
+            <p>Super godt valg! Du vil jo gerne bruge penge på et nyt spil, så for at downloade det, skal jeg lige bede om dine kontooplysninger, så kan jeg trække pengene fra dit kort. Hvis du allerede har en spilkonto med et tilknyttet kort, kan du bare forbinde direkte ved at logge ind.</p>
+                <button class="btn choice1">Forbind til spilkonto</button>
+                <button class="btn choice2">Indtast oplysninger</button>
+        </section>
+
+        <!--indeks 18//Klar til at spille!!!-->
+        <section class="stage">
+            <h2>Klar til at spille!!!</h2>
+            <p>Godt valg - det skal nok blive godt. Alt du skal gøre nu er at klikke “start spil”.</p>
+                <button class="btn choice1">Start spil</button>
+        </section>
+
+        <!--indeks 19//Forbind til spilkonto-->
+        <section class="stage">
+            <h2>Forbind til spilkonto</h2>
+            <p>Der er forskellige måder du kan forbinde din spilkonto på. Vælg hvordan du tidligere er logget ind.</p>
+                <button class="btn choice1">Facebook/Instagram</button>
+                <button class="btn choice2">Apple-konto</button>
+                <button class="btn choice3">Google-konto</button>
+                <button class="btn choice4">E-mail</button>
+                <button class="btn choice5">Send sms</button>
+        </section>
+
+        <!--indeks 20//Indtast oplysninger-->
+        <section class="stage">
+            <h2>Indtast oplysninger</h2>
+            <p>For at du kan betale, skal jeg lige bede om følgende oplsyninger:</p>
+                
+            <form>
+                <label for="navn" class="visually-hidden">Navn</label>
+                <input type="text" name="" id="navn" placeholder="Navn">
+                
+                <label for="mail">E-mail</label>
+                <input type="email" id="mail">
+
+                <label for="tel">Telefon</label>
+                <input type="tel" id="tel">
+
+                <label for="adresse">Adresse</label>
+                <input type="text" id="adresse">
 
 
+            <fieldset class="checkbox">
+                <div>
+                    <input type="checkbox" id="vilkaar">
+                    <label for="vilkaar">Marker med flueben for at acceptere Handelsvilkår og Betingelser</label>
+                </div>
+            </fieldset>        
+            </form>
+            <button class="bekraeft btn">Bekræft</button>
+            <button class="laes-vilkaar btn">Læs vilkår</button>
+            <button class="fortryd btn">Fortryd</button>
+        </section>
+
+        <!--indeks 21//Loader... Loader... Loader... Succes!-->
+        <section class="stage">
+            <h2><i class="fa-regular fa-face-frown fa-lg" style="color: #a18276;"></i>Loader... Loader... Loader... Succes!</h2>
+            <p>Tillykke! Vi har nu forbundet til din spilkonto. Det var jo dejligt nemt, både for dig og os... Så hvad er der sket? <br>Ved at forbinde til din spilkonto på denne måde, har vi nu har adgang til al den data, som du tidligere har givet tillladelse til at dele med din konto. Det er bla. ting som: <br> <br> - Navn, adresse, e-mail og tlf.nr. <br>- Kortoplysninger <br> -Data omkring din spiladfærd(hvornår du spiller, hvor ofte, hvilke spil, hvor lang tid) <br> - Din købhistorik<br><br><br>Det er for sent at fortryde nu, så du kan lige så godt bare starte dit spil og tænke på noget andet.</p>
+                <button class="btn choice1">Start spil</button>
+        </section>
+
+        <!--indeks 22//Læs vilkår-->
+        <section class="stage">
+            <h2>Læs vilkår</h2>
+            <p>Okay, så hvis du trykker bekræft får vi adgang til alle de oplsyninger du selv har udfyldt (og mere til). Vi får faktisk også lov til at at få adgang til data som din enhed opbevarer omkring din IP-adresse, skærmtid, hvornår bruger du hvilke apps, købshistorik og meget mere. <br> Det lyder jo helt vildt harmløst? Men altså, hvis du ikke vil give os alt det her, så må du godt nøjes bare med dit navn og kortoplysninger for denne omgang. Vi skal stadig bekræfte, at du bruger et kort i dit navn, så minimum den info må du altså give os. Ellers må du hellere downloade noget gratis i stedet, hvis vi ikke må få (og opbevare) dine givne informationer.</p>
+            <button class="btn choice1">Bekræft alligevel</button>
+            <button class="btn choice2">Del kun navn og kort</button>
+            <button class="btn choice3">Spil noget gratis</button>
+        </section>
+
+        <!--indeks 23//Loader... Loader... Loader... Succes!-->
+        <section class="stage">
+            <h2><i class="fa-regular fa-face-grin fa-lg" style="color: #a18276;"></i>Loader... Loader... Loader... Succes!</h2>
+            <p>Tillykke! Betalingen er gået igennem. Vi har kun adgang til dit navn og kortoplysninger, fordi det er et krav for at kunne downloade spillet. Det var måske meget smart, at du lige læste vores vilkår og betingelser igennem. <br> Vi håber, du vil nyde dit spil.</p>
+                <button class="btn choice1">Start spil</button>
+        </section>
+
+        <!--indeks 24//Fortryd?-->
+        <section class="stage">
+            <h2>Fortryd?</h2>
+            <p>Det er helt okay at fortryde sine valg. Så må du bare fortælle mig, hvad du hellere vil i stdet for? <br> 1. Fortsæt og forbind via spilkonto i stedet <br>2. Gå tilbage og brug penge på et andet spil <br>3. Find et gratis spil i stedet</p>
+            <button class="btn choice1">Forbind via spilkonto</button>
+            <button class="btn choice2">Vælg et andet spil</button>
+            <button class="btn choice3">Find et gratis spil</button>
+        </section>
+
+        <!--------------------------->
+        <!-------Akt 2 begynbder----->
+        <!--------------------------->
+
+        <!--indeks 25//AKT 2 begynder: Game time-->
+        <section class="stage">
+            <h2>Game time</h2>
+            <p>Du har åbnet dit nye spil og er bare MAX KLAR på at begynde at spille.... men.... <br><br> Som altid når man har downloadet et nyt spil dukker den der boks op, som fortæller om cookies, leverandører etc.<br>Vi lader lige som om, at følgende billede er fra det spil, du har downloadet.</p>
+            <p>Du kan se, at der er 211 partnere og leverandører, som meget gerne vil have lov til at indsamle nogle informationer om dig.</p>
+
+            <img src="img/cookies/game-consent-img.jpg" alt="" class="cookieees">
+
+            <button class="btn choice1">Administrer muligheder</button>
+            <button class="btn choice2">Giv samtykke</button>
+        </section>
+
+        <!--indeks 26//Administrer muligheder-->
+        <section class="stage">
+            <h2>Administrer muligheder</h2>
+            <p>Du kan se, at der er en masse leverandører, og de vil meget gerne have adgang til din data, og at legitim interesse er slået til også</p>
+            <img src="img/cookies/admOplysninger.jpg" alt="" class="cookieees">
+            <p>Du scroller længere ned og ser, at de forklarer hvordan de opbevarer dine data, hvor lang tid og at du kan læse, hvad de vil bruge dem til også. </p>
+            <img src="img/cookies/legitimInteresse.jpg" alt="" class="cookieees">
+            <p>Hvordan vil du fortsætte?</p>
+            <button class="btn choice1">Bekræft dine valg (som de er)</button>
+            <button class="btn choice2">Acceptér alle</button>
+            <button class="btn choice3">Læs “Præferencer for leverandører”</button>
+        </section>
+
+        <!--indeks 27//Giv samtykke-->
+        <section class="stage">
+            <h2>Giv samtykke</h2>
+            <p>Perfekt. <br> Vidste du godt, at vi nu får lov til at gøre følgende og lidt ekstra til, fordi du bare accepterede alt uden videre?</p>
+            <img src="img/cookies/legitimInteresse.jpg" alt="" class="cookieees">
+            <p>Det betyder, at dine annoncer bliver mere målrettet dine interesser. Det er jo rart for dig, for så ser du kun ting, du interesserer dig for. Måske det også letter lidt på pengepungen både med og uden din viden. <br><br> Du ved ikke, hvem vores leverandører er, eller hvor ærlige de er. Du har enten stolet blindt på os, hvilket ærligt talt er ret naivt, eller også var du så ligeglad, at vi faktisk ikke har ondt af dig, hvis din data nu bliver misbrugt, for du gad ikke engang lige kigge 3 sekunder, for at se, hvad du går ind til her. <br><br>Du tænker nok ikke over det, men det er en kontrakt der skrives under på, når du accepterer vores vilkår, betingelser og cookies. <br><br> Now you know. At vi kan tracke din adfærd gør, at vores annoncer passer bedre til dig = Vi håber da rigtigt meget på, at du vil investere flere og flere og flere penge i os. #mangeBækkeSmå <br><br>Skidt pyt, spil du videre... >:D</p>
+            <button class="btn choice1">Fortsæt...</button>
+        </section>
+
+        <!--indeks 28//Som du er-->
+        <section class="stage">
+            <h2>Som du er</h2>
+            <p>Jo jo. Det her er en mellemvej. Vi får lov at samle lidt mere data omkring dig, end du måske tænker på er rart, men ikke så meget som vi VIRKELIG ellers godt gad!!!! <br><br>Men det er okay. <br>Fun fact: Spillet virker fremragende uanset hvor mange cookies etc. du accepterer. Den største forskel er, om vi kan gætte hvilke reklamer der virker bedst på dig.</p>
+            <button class="btn choice1">Fortsæt...</button>
+        </section>
+
+        <!--indeks 29//Læsehesten-->
+        <section class="stage">
+            <h2>Læsehesten</h2>
+            <p>Du er en af de kloge. Nu får du lov til at se, hvad vores intentioner er... <br><br>HVIS du vælger at acceptere, så får vi lov til at vide rigtigt mange ting om dig. Vi vil dele de her ting med vores leverandører og partnere. Hver gang du åbner spillet, så starter vores indsamling af din data på ny. <br><br>Vidste du, at nogle af vores leverandører (hvis du accepterer) får lov at tracke din adfærd og data i helt op til 3653 dage fra hver gang du logger ind? (Jeg tager ikke pis på dig, det her er screenshots fra ægte spil fra Apple-store)</p>
+            <img src="img/cookies/adformCookies.jpg" alt="" class="cookieees">
+            <img src="img/cookies/liveRampCookies.jpg" alt="" class="cookieees">
+            <img src="img/cookies/adventureMediaSARLCookies.jpg" alt="" class="cookieees">
+            <p>Hvad vil vi så bruge den her data til? Altså vi (Spiludbyderen) vil bare prøve at få dig til at købe foreskellige fordele i spillet. Måske se, om du kan logges til at bruge endnu flere penge på andre af vores apps og spil. Vores leverandører? <br> Altså hvad de laver af aktiviteter (lovlige eller ej) kan vi ikke stå inde for FORDI <br><br>Ved at acceptere, så ansvarsfraskriver vi os, hvad de bruger din data til. <br><br>SÅ hvis de nu får adgang til dit kort og hacker din bank somehow eller spammer dig med scammy e-mails, så er det et DIG problem. For du har selv givet os lov til at få din data. <br><br> Er det ikke bare skønt? Hvad vælger du?</p>
+            <img src="img/cookies/legitimInteresse.jpg" alt="" class="cookieees">
+            <button class="btn choice1">Bekræft dine valg (som de er)</button>
+            <button class="btn choice2">Acceptér alle</button>
+            <button class="btn choice3">Manuelt slå alt fra før du går videre</button>
+        </section>
+
+        <!--indeks 30//SaFeTy FiRsT-->
+        <section class="stage">
+            <h2>SaFeTy FiRsT</h2>
+            <p>Amen altså, jeg kan da heller ikke løbe om hjørner med dig. <br><br>Jeg må indrømme, jeg er stolt af dit valg. Nu skal du få lov til at nyde dit spil lidt i fred</p>
+            <button class="btn choice1">START</button>
+        </section>
+
+        <!--indeks 31//Tik tak-->
+        <section class="stage">
+            <h2>Tik tak</h2>
+            <p>Sid her et øjeblik. Husk på, at du er til time, så måske du skulle lytte til lidt læreren. Det kunne jo være, at han var færdig med at vrøvle om fisk</p>
+            <button class="btn choice1">No way! Get'cha head in the game</button>
+            <button class="btn choice2">Lyt med ét øre</button>
+            <button class="btn choice3">Gud ja, det var vist en god idé at lytte</button>
+        </section>
+
+        <!--indeks 32//We ballin'-->
+        <section class="stage">
+            <h2>We ballin'</h2>
+            <p>Du spiller. Og spiller. Og spiller. Ind i mellem kommer en enkelt reklame eller et super tilbud, så du kan få nogle særlige evner og tilføjelser til spillet. Nogle af tingene koster penge. Nogle af tingene kan man få, bare ved at se en reklame</p>
+            <button class="btn choice1">Smid en 50'er på cool upgrades</button>
+            <button class="btn choice2">Se reklamer</button>
+            <button class="btn choice3">Ignorer og spil videre</button>
+        </section>
+
+        <!--indeks 33//Tunge timer-->
+        <section class="stage">
+            <h2>Tunge timer</h2>
+            <p>“Bla bla bla... om datasikkerhed.... tungt.... kahoot og vinderen... kantine...” <br><br> Du fanger nogle enkelte ord hist og her. Der er vist en quiz med en præmie af en art?</p>
+            <button class="btn choice1">“Hov, kan du gentage det?”</button>
+            <button class="btn choice2">Fortsæt i din egen lille verden</button>
+        </section>
+
+        <!--indeks 34//Quiz???-->
+        <section class="stage">
+            <h2>Quiz???</h2>
+            <p>“Nå allesammen. Nu lærer vi jo en masse om datasikkerhed. Jeg veed godt emnet kan være lidt tungt, så! Jeg har lavet en Kahoot og vinderen får en kupon til en gratis sandwich og en stor gratis sodavand i kantinen...”” <br><br>Uhhh, det kunne da måske være meget interessant. Vil du prøve at deltage?</p>
+            <button onclick="startQuiz(34, 39)">Start quiz</button>
+            <button class="btn choice2">Fortsæt i din egen lille verden</button>
+        </section>
+
+        <!--indeks 35//50 Cent ain't got nothing on you-->
+        <section class="stage">
+            <h2>50 Cent ain't got nothing on you</h2>
+            <p>Tak for købet! Her er din upgradeeee. (vi har dine kortoplysninger MUAHAHAHHAHA) <br> Hvis du deler spillet med dine venner og giver os en anmeldelse, så får en en lille ekstra bonus oveni - TILBUDDET GÆLDER KUN DE NÆSTE 20 MINUTTER</p>
+            <button class="btn choice1">Del, anmeld og få din præmie!</button>
+            <button class="btn choice2">Spil bare videre</button>
+        </section>
+
+         <!--indeks 36//Reklame-manden-->
+        <section class="stage">
+            <h2>Reklame-manden</h2>
+            <p>Din lille 1 minuts booster kommer her. Ooog, hvis du nu downloade spillet fra reklamen, så kan vi bedre analysere din adfærd fremadrettet for at anbefale mere relevante reklamer UANSET om du gav os lov eller ej. Ved at trykke på reklamen får vi lidt lov alligevel. <br><br>Du kan også lige dele spillet med dine venner og anmelde det for en ekstra bonus upgrade - TILBUDDET GÆLDER KUN DE NÆSTE 20 MINUTTER</p>
+            <button class="btn choice1">Del, anmeld og få din præmie!</button>
+            <button class="btn choice2">Spil bare videre</button>
+        </section>
+
+        <!--indeks 37//Ebenezer Scrooge-->
+        <section class="stage">
+            <h2>Ebenezer Scrooge</h2>
+            <p>Du tænker kun på dig selv og vi elsker det! Her er alle dine belønninger VI ELSKER DIIIG (og vigtigst af alt al den info du så frivilligt giver os til gengæld)</p>
+            <button class="btn choice1">Gameeee</button>
+        </section>
+
+        <!--indeks 38//Måske næste gang-->
+        <section class="stage">
+            <h2>Måske næste gang</h2>
+            <p>Okay, så dig og dine venner skulle ikke have glæde af særlige tilbud og rabatter? Så fair. Spil du bare videre</p>
+            <button class="btn choice1">Gameeee</button>
+        </section>
+
+        <!--indeks 39//QuizLord-->
+        <section class="stage" id="quizlord">
+            <h2>QuizLord</h2>
+            <p>"Du var satme god" siger din lærer til dig. Som belønning får du..."</p>
+            <p>+1 kupon til kantinen</p>
+            <button class="btn choice1">Indløs i kantinen</button>
+        </section>
+
+        <!--indeks 40//Yikes-->
+        <section class="stage" id="taber">
+            <h2>Yikes</h2>
+            <p>"Nå.. Jamendu prøvede vel dit bedste. Jeg tror bare, vi hellere må holde frokost nu"</p>
+            <button class="btn choice1">Find din frokost frem</button>
+        </section>
+        <p></p>
 
     </main>
     

@@ -13,17 +13,19 @@ body {
 main {
   background-color: #FBF7F4;
   margin: 50px;
-  border: solid #321205 7px;
+  border: solid #A18276 7px;
   border-radius: 30px;
   width: auto;
   min-height: 90vh;
-  max-height: 100vh;
+  max-height: auto;
 }
 
 .stage {
   display: none;
   margin: 0 auto;
   max-width: 80vw;
+  margin-bottom: 20px;
+  flex-direction: column;
 }
 .stage.active {
   display: block;
@@ -32,9 +34,74 @@ main {
 
 .img-game-pic {
   height: auto;
-  width: 60px;
+  width: 200px;
   border-radius: 15px;
   border: 2px solid grey;
+  margin: 30px 35px;
+}
+.img-game-pic:hover {
+  animation: bounce 1.3s ease-in-out 5;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.img-for-game-logos {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.music-btn {
+  width: 200px;
+  font-size: 12px;
+  padding: 5px;
+  border: 2px solid #A18276;
+  border-radius: 5px;
+  box-shadow: none;
+}
+.music-btn:hover {
+  background-color: #A18276;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100px;
+  height: 6px;
+  background: #A18276; /* selve slider-banen */
+  border-radius: 5px;
+  outline: none;
+}
+
+/* selve "knoppen" */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #FBF7F4;
+  border: 2px solid #212529;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+label {
+  font-size: 12px;
+  padding: 8px;
+}
+
+.music-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1, h2 {
@@ -43,9 +110,14 @@ h1, h2 {
 }
 
 h1 {
-  border-bottom: 5px solid #321205;
+  border-bottom: 5px solid #A18276;
   padding: 25px;
   font-size: 2.5em;
+}
+
+a {
+  text-decoration: none;
+  color: #212529;
 }
 
 h2 {
@@ -57,20 +129,31 @@ h2 {
 
 p {
   margin: auto 5em;
-  padding: 40px;
+  padding: 20px;
   display: flex;
   justify-content: center;
   line-height: 1.4em;
   font-size: 1.3em;
 }
 
+.cookieees {
+  max-width: 600px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
 button {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
   border-radius: 15px;
   height: auto;
   width: 50%;
   padding: 15px;
   margin: 5px;
-  box-shadow: 0px 5px #CFCFCF;
+  box-shadow: 0px 3px #CFCFCF;
+  align-items: center;
 }
 button:hover {
   cursor: pointer;
@@ -122,4 +205,18 @@ button:active {
 }
 .choice6:hover {
   background-color: #936FAC;
+}
+
+.choice {
+  box-shadow: none;
+  border: 2px solid #A18276;
+}
+.choice:hover {
+  cursor: auto;
+  transition-duration: none;
+}
+.choice:active {
+  box-shadow: none;
+  transform: none;
+  transition-duration: none;
 }/*# sourceMappingURL=style.css.map */
