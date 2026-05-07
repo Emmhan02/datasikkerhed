@@ -21,9 +21,10 @@ $box-shadow-color: #CFCFCF;
 $img-border-color:grey;
 $img-border-radius: 15px;
 
+@use "partial";
 
 
-//Ensartet styling generel
+//Ensartet styling som altid gælder
 *{
     box-sizing: border-box;
     margin: 0;
@@ -81,6 +82,21 @@ main{
     margin-top: 50px;
 }
 
+.yellow{
+    background-color: $share-some-data-color;
+    @include partial.data;
+}
+
+.red{
+    background-color: $share-most-data-color;
+    @include partial.data;
+}
+
+.green{
+    background-color: $share-minimum-data-color;
+    @include partial.data;
+}
+
 //styling på alt tilhørende musik
 .music-btn{
     width: 200px;
@@ -98,12 +114,11 @@ input[type="range"] {
   -webkit-appearance: none;
   width: 100px;
   height: 6px;
-  background: $scene-border-color; /* selve slider-banen */
+  background: $scene-border-color;
   border-radius: 5px;
   outline: none;
 }
 
-/* selve "knoppen" */
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -256,4 +271,113 @@ button{
         }
 }
 
+.bekraeft{
+    background-color: $share-minimum-data-color;
+        &:hover{
+            border: 2px solid $share-minimum-data-color;
+            font-size: 1.1em;
+        }
+}
+
+.laes-vilkaar{
+    background-color: $share-some-data-color;
+        &:hover{
+                border: 2px solid $share-some-data-color;
+                font-size: 1.1em;
+            }
+}
+
+.fortryd{
+    background-color: $share-most-data-color;
+        &:hover{
+                border: 2px solid $share-most-data-color;
+                font-size: 1.1em;
+            }
+}
+
 //Kontaktform
+.kontaktform{
+    width: 50%;
+    margin: 10px auto;
+}
+
+input[type=text], input[type=email], input[type=tel]{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid $img-border-color;
+    border-radius: $img-border-radius;
+    margin-bottom: 0.5rem;
+}
+
+.visually-hidden{
+    font-size: 1.1em;
+    font-weight: bold;
+    display: flex;
+    justify-content: left;
+    padding-bottom: 2px;
+}
+
+fieldset{
+    border-style: dotted;
+}
+
+
+//------MEDIA QUERIES-------
+@media screen and (max-width: 900px){
+//Ensartet styling generel
+
+body {
+      background-color: $scene-border-color;
+      background-image: none;
+    }
+
+main{
+    margin: 50px auto;
+    max-width: 95%;
+    height: auto;
+    background: $bg-color;
+    border: solid $scene-border-color $scene-border-size;
+    border-radius: 30px;
+    padding: 5px;
+}
+
+.stage{
+    max-width: 90vw;
+    margin-bottom: 20px;
+}
+
+.img-game-pic{
+    width: 80px;
+    margin: 10px 12px;
+    }
+
+.img-for-game-logos{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+//Styling på tekst
+h1{
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 0;
+}
+
+p{
+    font-size: 1rem;
+    padding: 0 20px;
+    margin: 0;
+}
+
+.cookieees{
+    max-width: 80%;
+    padding-bottom: 10px;
+}
+
+button{
+    width: 80%;
+    columns: $font-color;
+}
+
+}
