@@ -36,7 +36,7 @@ body {
         background: $bg-color;
         border: solid $scene-border-color $scene-border-size;
         border-radius: 30px;
-        padding: 2rem;
+        padding: 2.5rem;
     }
 
     h1 {
@@ -114,5 +114,48 @@ body {
 
     #result {
       text-align: center;
-      font-size: 2rem;
+      font-size: 1.2rem;
     }
+
+@media screen and (max-width: 900px){
+  body {
+      background-color: $scene-border-color;
+      background-image: none;
+    }
+
+    .quiz-container {
+        margin: 5px auto;
+        width: 80%;
+        max-width: 90%;
+        border-radius: 30px;
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1rem;
+        }
+
+    #question {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      margin-top: 2em;
+    }
+
+    .answer-btn {
+      width: 100%;
+    }
+
+    #next-btn {
+      margin-top: 2rem;
+      width: 45%;
+    }
+
+    #progress {
+      margin-bottom: 1.5rem;
+    }
+
+    #result {
+      text-align: center;
+      font-size: 1.2rem;
+    }
+}

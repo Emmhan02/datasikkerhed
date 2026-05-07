@@ -13,7 +13,7 @@ body {
   background: #FBF7F4;
   border: solid #A18276 7px;
   border-radius: 30px;
-  padding: 2rem;
+  padding: 2.5rem;
 }
 
 h1 {
@@ -91,5 +91,41 @@ h1 {
 
 #result {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    background-color: #A18276;
+    background-image: none;
+  }
+  .quiz-container {
+    margin: 5px auto;
+    width: 80%;
+    max-width: 90%;
+    border-radius: 30px;
+    padding: 1rem;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+  #question {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 2em;
+  }
+  .answer-btn {
+    width: 100%;
+  }
+  #next-btn {
+    margin-top: 2rem;
+    width: 45%;
+  }
+  #progress {
+    margin-bottom: 1.5rem;
+  }
+  #result {
+    text-align: center;
+    font-size: 1.2rem;
+  }
 }/*# sourceMappingURL=quizStyle.css.map */

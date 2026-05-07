@@ -8,11 +8,6 @@ const buttonSound = document.querySelectorAll("button");
 const music = document.getElementById("bg-music");
 const btn = document.getElementById("music-toggle");
 
-//quiz-variabel
-function startQuiz(fromStage, afterQuizStage) {
-  window.location.href = `quiz.html?from=${fromStage}&next=${afterQuizStage}`;
-}
-
 //funktion for baggrundsmusik
   function toggleMusic() {
     if (music.paused) {
@@ -38,7 +33,6 @@ function startQuiz(fromStage, afterQuizStage) {
 const nextStage = (e) => {
     console.log(e.target.textContent);
     switch(e.target.textContent){
-
 
         //introduktion
         case "Start din dag":
@@ -408,10 +402,6 @@ const nextStage = (e) => {
             stages[31].classList.remove("active");
             stages[34].classList.add("active");
         break;
-                case "Lad mig spille med!!!":
-                    stages[34].classList.remove("active");
-                    stages[39].classList.add("active");
-                break;
         case "Del, anmeld og få din præmie!":
             stages[35].classList.remove("active");
             stages[36].classList.remove("active");
@@ -422,17 +412,193 @@ const nextStage = (e) => {
             stages[36].classList.remove("active");
             stages[38].classList.add("active");
         break;
+        
+        //Frokostpausen
         case "Gameeee":
             stages[37].classList.remove("active");
             stages[38].classList.remove("active");
+            stages[39].classList.add("active");
+        break;
+        case "Spis i klasselokalet":
+            stages[39].classList.remove("active");
+            stages[41].classList.add("active");
+        break;
+        case "Gå med i kantinen":
+            stages[39].classList.remove("active");
             stages[40].classList.add("active");
         break;
+        case "Hold John med selskab":
+            stages[40].classList.remove("active");
+            stages[42].classList.add("active");
+        break;
+        case "Spis skammens madpakke":
+            stages[40].classList.remove("active");
+            stages[43].classList.add("active");
+        break;
+                case "Fang din lærer":
+                    stages[43].classList.remove("active");
+                    stages[73].classList.add("active");
+                break;
+                case "Prøv igen i morgen":
+                    stages[43].classList.remove("active");
+                    stages[0].classList.add("active");
+                break;
+        case "Lån USB-stikket":
+            stages[42].classList.remove("active");
+            stages[57].classList.remove("active");
+            stages[61].classList.add("active");
+        break;
+        case "Sig “Nah, ellers tak” og gå med John":
+            stages[42].classList.remove("active");
+            stages[44].classList.add("active");
+        break;
+        case "Åbn den 1. fil":
+            stages[45].classList.remove("active");
+            stages[46].classList.add("active");
+        break;
+
+        //Veje hvor du bliver i klassen
+        case "*Ram vandflasken*":
+            stages[41].classList.remove("active");
+            stages[48].classList.add("active");
+        break;
+        case "*Ram noget sodavand*":
+            stages[41].classList.remove("active");
+            stages[49].classList.add("active");
+        break;
+        case "Bed om hjælp":
+            stages[48].classList.remove("active");
+            stages[50].classList.add("active");
+        break;
+        case "Hent noget at tørre med":
+            stages[48].classList.remove("active");
+            stages[52].classList.add("active");
+        break;
+        case "LØB UD OG HENT NOGET PAPIR":
+            stages[49].classList.remove("active");
+            stages[51].classList.add("active");
+        break;
+        case "På forhånd tak!":
+            stages[50].classList.remove("active");
+            stages[58].classList.add("active");
+        break;
+        case "Tør dig selv af":
+            stages[51].classList.remove("active");
+            stages[53].classList.add("active");
+        break;
+        case "Skynd dig tilbage":
+            stages[51].classList.remove("active");
+            stages[54].classList.add("active");
+        break;
+        case "Skynd dig tilbage igen":
+            stages[52].classList.remove("active");
+            stages[55].classList.add("active");
+        break;
+        case "Vend tilbage til klassen":
+            stages[53].classList.remove("active");
+            stages[57].classList.add("active");
+        break;
+        case "Tak for hjælpen":
+            stages[54].classList.remove("active");
+            stages[58].classList.add("active");
+        break;
+        case "Øhh, hvorfor rører du mine ting!?!":
+            stages[54].classList.remove("active");
+            stages[59].classList.add("active");
+        break;
+        case "Hmm...":
+            stages[55].classList.remove("active");
+            stages[60].classList.add("active");
+        break;
+        case "Pak dine ting og gå hjem":
+            stages[55].classList.remove("active");
+            stages[62].classList.add("active");
+        break;
+        case "Gå tilbage til klassen igen":
+            stages[56].classList.remove("active");
+            stages[57].classList.add("active");
+        break;
+        case "Giv op og gå hjem uden":
+            stages[57].classList.remove("active");
+            stages[62].classList.add("active");
+        break;
+        case "Fang dem":
+            stages[60].classList.remove("active");
+            stages[63].classList.add("active");
+        break;
+        case "Giv op og gå hjem...":
+            stages[60].classList.remove("active");
+            stages[64].classList.add("active");
+        break;
+        case "Gå hjem":
+            stages[63].classList.remove("active");
+            stages[64].classList.add("active");
+        break;
+        case "Snak med din lærer":
+            stages[63].classList.remove("active");
+            stages[65].classList.add("active");
+        break;
+        case "Tryk på beskeden":
+            stages[61].classList.remove("active");
+            stages[66].classList.add("active");
+        break;
+        case "Læs den":
+            stages[62].classList.remove("active");
+            stages[68].classList.add("active");
+        break;
+        case "Ignorér":
+            stages[62].classList.remove("active");
+            stages[67].classList.add("active");
+        break;
+        case "Læs den alligevel":
+            stages[67].classList.remove("active");
+            stages[68].classList.add("active");
+        break;
+        case "Gør som den siger":
+            stages[68].classList.remove("active");
+            stages[69].classList.add("active");
+        break;
+        case "Rapporter og slet":
+            stages[68].classList.remove("active");
+            stages[70].classList.add("active");
+        break;
+        case "Opdatér adresse":
+            stages[69].classList.remove("active");
+            stages[71].classList.add("active");
+        break;
+
+
+
+
+
         
 
+        //Alle Zzz veje der genstarter dagen
+        case "Zzzz.. Vi ses i morgen":
+        window.location.href = "index.html";
+        break;
 
-        //Quiz om kantinekupon vej
+        //Alle veje der fører til quiz
+        case "Start quiz":
+        case "Øv dig":
+        case "Få quizzen airdroppet":
+        case "Åbn den 2. fil":
+        window.location.href = "quiz.html";
+        break;
+
+        //Alle veje der fører til hacked
+        case "ÅBN MIN FIIIL":
+        case "Åben d. 3. fil":
+        case "Acceptér beskeden":
+        case "Oh shit":
+        window.location.href = "hack.html";
+        break;
 
 
+        //DEFAULT
+        default:
+            console.log("Ingen case matchede", e.target.textContent)
+        break;
     }
     //For at bruger starter i "toppen" af hver ny case og ikke hvor de sidst var placeret, hvis de har scrollet
     setTimeout(() => {

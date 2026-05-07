@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Courier New", Courier, monospace;
+  background-color: black;
+  background-image: url(../img/binary.jpg);
+  animation-name: move;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+h1 {
+  font-size: 15vw;
+  animation: fadeInOut 1.5s ease-in-out 5;
+  color: red;
+  padding: 20px;
+}
+
+p {
+  text-align: center;
+  font-size: 10rem;
+}
+
+.fade {
+  border: solid 10px white;
+  background-color: rgba(0, 0, 0, 0.604);
+}
+
+@keyframes move {
+  from {
+    background-position: center 150%;
+  }
+  to {
+    background-position: center 0;
+  }
+}
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}/*# sourceMappingURL=styleHack.css.map */

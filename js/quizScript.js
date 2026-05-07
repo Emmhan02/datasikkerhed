@@ -245,7 +245,10 @@ const questions = [
           <h2>🏆 Jeg kaldte det en quiz...</h2>
 
           <p>
-            Du kaldte det offentligt ydmygelse af andre! #respektForVoresTriviaOverlord!!!
+            Du kaldte det offentligt ydmygelse af andre! #respektForVoresTriviaOverlord 👑!!!
+          </p>
+          <p>
+            Din belønning er +1 kupon til kantinen, så du kan nyde en velfortjent frokost, før du smutter tidligt hjem for i dag!!!
           </p>
 
           <h2>Score: ${score}/10</h2>
@@ -258,6 +261,9 @@ const questions = [
 
           <p>
             I det mindste er du konsekvent... Lad os være glade for, at det her bare er en "for-sjov" quiz og ikke IRL....
+          </p>
+          <p>
+            Jeg tror faktisk bare, at vi lader dig gå hjem for i dag. Datasikkerhed er et stort emne, og du har noget vej endnu, før du kan outsmarte de IT-krimenelle!!!
           </p>
 
           <h2>Score: ${score}/10</h2>
